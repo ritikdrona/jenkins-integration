@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'aafcddd1-a8e6-425b-abc0-5d3a35f42ec3', url: 'https://github.com/ritikdrona/jenkins-integration']])
             }
         }
     }
